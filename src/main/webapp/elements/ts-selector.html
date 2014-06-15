@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<polymer-element name="ts-selector" attributes="onClass">
+    <template>
+        <div class="wrapper">
+            <div style="display: block;" class="pagepanel" id="personal">
+			<span class="boxinput">
+				<label>Time zone</label>
+				<input readonly="readonly" class="showpicker" data-picker="timezone" value="GMT+1 Copenhagen"
+                       type="text" on-click="{{buttonClick}}">
+			</span>
+            </div>
+        </div>
+        <div>
+
+        <div class="picker {{ onClass }}" id="picker-timezone" data-pickertype="picker-timezone">
+            <div style="margin-right: 0px; z-index: 50;" class="pickerbox animate">
+                <div class="header">Set your timezone<a href="#" class="pickerclose icon-remove textonly"></a></div>
+                <ul class="options">
+                    <li class="input"><input class="optionsearch" id="timezonesearch" placeholder="Search" type="text">
+                    </li>
+                    <li><a href="#" class="done textonly" data-val="GMT+1">GMT+1 Brussels, Copenhagen, Madrid</a></li>
+                    <li><a href="#" class="done textonly" data-val="GMT+2">GMT+2 Kaliningrad, South Africa</a></li>
+                    <li><a href="#" class="done textonly" data-val="Customer Service">GMT+3 Baghdad, Riyadh, Moscow</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </template>
+
+    <script>
+        Polymer('ts-selector', {
+            buttonClick: function () {
+                this.onClass = this.onClass == 'on'?'':'on';
+            }
+        })
+
+    </script>
+
+
+</polymer-element>

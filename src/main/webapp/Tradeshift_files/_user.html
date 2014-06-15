@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<link href="Tradeshift_files/css.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="Tradeshift_files/normalize.css">
+	<link rel="stylesheet" href="_user_data/font-awesome.html">
+	<link rel="stylesheet" href="Tradeshift_files/chrome.css">
+	
+	<script src="Tradeshift_files/modernizr-2.js"></script>
+<style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+/** reset styling **/
+.firebugResetStyles {
+    z-index: 2147483646 !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: block !important;
+    border: 0 none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: fixed !important;
+    transform: rotate(0deg) !important;
+    transform-origin: 50% 50% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent none !important;
+    pointer-events: none !important;
+    white-space: normal !important;
+}
+
+.firebugBlockBackgroundColor {
+    background-color: transparent !important;
+}
+
+.firebugResetStyles:before, .firebugResetStyles:after {
+    content: "" !important;
+}
+/**actual styling to be modified by firebug theme**/
+.firebugCanvas {
+    display: none !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    width: auto !important;
+    position: static !important;
+}
+
+.firebugLayoutBoxOffset {
+    opacity: 0.8 !important;
+    position: fixed !important;
+}
+
+.firebugLayoutLine {
+    opacity: 0.4 !important;
+    background-color: #000000 !important;
+}
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+    width: 1px !important;
+    height: 100% !important;
+}
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+    width: 100% !important;
+    height: 1px !important;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px !important;
+    border-top: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px !important;
+    border-left: 1px solid #999999 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBoxParent {
+    border-top: 0 none !important;
+    border-right: 1px dashed #E00 !important;
+    border-bottom: 1px dashed #E00 !important;
+    border-left: 0 none !important;
+    position: fixed !important;
+    width: auto !important;
+}
+
+.firebugRuler{
+    position: absolute !important;
+}
+
+.firebugRulerH {
+    top: -15px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 14px !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
+    border-top: 1px solid #BBBBBB !important;
+    border-right: 1px dashed #BBBBBB !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.firebugRulerV {
+    top: 0 !important;
+    left: -15px !important;
+    width: 14px !important;
+    height: 100% !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
+    border-left: 1px solid #BBBBBB !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px dashed #BBBBBB !important;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0 !important;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.fbProxyElement {
+    position: fixed !important;
+    pointer-events: auto !important;
+}
+</style></head>
+<body class="phone tablet desktop desktoplarge">
+	
+	<div id="menu-contextual"><div id="context-left"><a href="#" class="togglemenu contextualopener icononly" data-openin="menu"><span class="icon shifties-menuswitch"></span><span class="counter"></span></a></div>
+		<ul>
+			<li><a href="#" data-panel="personal" class="textonly active">Personal</a></li>
+			<li><a class="textonly" href="#" data-panel="notifications">Notifications</a></li>
+		</ul>
+	<div id="context-right"></div></div>
+	
+	<div class="wrapper">
+		<div style="display: block;" class="pagepanel" id="personal">
+			<span class="boxinput">
+				<label>Full name</label>
+				<input value="Mikkel Bo Schmidt" class="autosave" data-table="employees" data-field="employee_name" data-idfield="employee_id" data-rowid="1" type="text">
+			</span>
+			<span class="boxinput">
+				<label>Work email address</label>
+				<input value="mbs@tradeshift.com" class="autosave" data-table="employees" data-field="employee_email" data-idfield="employee_id" data-rowid="1" type="text">
+			</span>
+			<span class="boxinput">
+				<label>Your job position</label>
+				<input type="text">
+			</span>
+			<span class="boxinput">
+				<label>Time zone</label>
+				<input readonly="readonly" class="showpicker" data-picker="timezone" value="GMT+1 Copenhagen" type="text">
+			</span>
+			<span class="boxinput focus">
+				<label>Language</label>
+				<input readonly="readonly" class="showpicker" data-picker="language" value="English (UK)" type="text">
+			</span>
+			<span class="boxlink">
+				<a href="#" class="alert textonly">Delete account</a>
+			</span>
+		</div>
+		<div style="display: none;" class="pagepanel" id="notifications">
+			<span class="boxinput">
+				<label>Set notifications for email</label>
+				<input readonly="readonly" class="showpicker" data-picker="switchemail" value="john.a@johnscookies.com" type="text">
+			</span>
+			<div class="boxswitches">
+				<div class="boxheader">Document notifications</div>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">You receive a comment</a>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">You receive a comment on a document</a>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">Document changes state</a>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">Document sending fails</a>
+			</div>
+			<div class="boxswitches">
+				<div class="boxheader">Network notifications</div>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">You receive a connection request</a>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">Your company is recommended</a>
+			</div>
+			<div class="boxswitches">
+				<div class="boxheader">Other notifications</div>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">Tradeshift newsletters and information</a>
+				<a href="#" class="instaswitch textonly active" data-settingname="dummy" data-settingvalue="active">Tradeshift system messages</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="picker" id="picker-language" data-pickertype="picker-language">
+		<div style="margin-right: 0px; z-index: 50;" class="pickerbox animate">
+			<div class="header">Select your preferred language<a href="#" class="pickerclose icon-remove textonly"></a></div>
+			<ul class="options">
+				<li><a href="#" class="done textonly" data-val="English (UK)">English (UK)</a></li>
+				<li><a href="#" class="done textonly" data-val="English (US)">English (US)</a></li>
+				<li><a href="#" class="done textonly" data-val="Deutsch">Deutsch</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Dansk</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Castellano</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Francais</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Magyar</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Nederlands</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Polski</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Suomi</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Italiano</a></li>
+				<li><a href="#" class="done textonly" data-val="R&amp;D">Svenska</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="picker" id="picker-timezone" data-pickertype="picker-timezone">
+		<div style="margin-right: 0px; z-index: 50;" class="pickerbox animate">
+			<div class="header">Set your timezone<a href="#" class="pickerclose icon-remove textonly"></a></div>
+			<ul class="options">
+				<li class="input"><input class="optionsearch" id="timezonesearch" placeholder="Search" type="text"></li>
+				<li><a href="#" class="done textonly" data-val="GMT+1">GMT+1 Brussels, Copenhagen, Madrid</a></li>
+				<li><a href="#" class="done textonly" data-val="GMT+2">GMT+2 Kaliningrad, South Africa</a></li>
+				<li><a href="#" class="done textonly" data-val="Customer Service">GMT+3 Baghdad, Riyadh, Moscow</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+
+<div class="picker contenttop" id="picker-employee" data-pickertype="picker-employee">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><a href="#" class="shifties-close icon textonly"></a></div>
+		<div id="emprep">
+			<div class="employeebg" style="background-image: url(../employees/kmu-tradeshift-com.png);">x</div>
+			<h1 class="empname">name</h1>
+			<h2><span class="emprole">role</span> at <a href="#" class="empcompany textonly">company</a></h2>
+			<a href="http://www.linkedin.com/" class="linkedinlink textonly" target="_blank">
+			          <img src="_user_data/linkedin.png" alt="View profile on LinkedIn" border="0" height="15" width="80">
+			</a>
+			<ul class="statbuttons clearfix">
+				<li><a href="#" class="active"><span class="icon icon-comments"></span> 0</a></li>
+				<li><a href="#"><span class="icon icon-fire"></span> 22</a></li>
+				<li><a href="#"><span class="icon icon-bookmark"></span> 3</a></li>
+			</ul>
+		</div>
+		<div class="input">
+			<label for="pempcomment">Private message</label>
+			<textarea id="pempcomment" class="pickercomment" data-defaultvalue="" placeholder="Write here..."></textarea>
+		</div>
+		<a href="#" class="button done textonly">Send private message</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-status-other-a" data-pickertype="picker-other-a">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Optional actions…</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="sendpayment" data-object=""><span class="icon icon-money"></span>Send payment</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="dispute" data-object=""><span class="icon icon-ban-circle"></span>Dispute/reject</a></li>
+			
+		</ul>
+	</div>
+</div>
+
+<div class="picker" id="picker-status-other-b" data-pickertype="picker-other-b">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Optional actions…</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="recordpayment" data-object=""><span class="icon icon-money"></span>Record payment</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="dispute" data-object=""><span class="icon icon-ban-circle"></span>Dispute/reject</a></li>			
+		</ul>
+	</div>
+</div>
+
+<div class="picker" id="picker-code-other-a" data-pickertype="picker-other-a">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Optional actions…</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="sendpayment" data-object=""><span class="icon icon-money"></span>Send payment</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="comment" data-object=""><span class="icon icon-comment"></span>Comment</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="share" data-object=""><span class="icon icon-share-alt"></span>Share</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="dispute" data-object=""><span class="icon icon-ban-circle"></span>Dispute/reject</a></li>
+			
+		</ul>
+	</div>
+</div>
+
+<div class="picker" id="picker-code-other-b" data-pickertype="picker-other-b">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Optional actions…</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="recordpayment" data-object=""><span class="icon icon-money"></span>Record payment</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="comment" data-object=""><span class="icon icon-comment"></span>Comment</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="share" data-object=""><span class="icon icon-share-alt"></span>Share</a></li>
+			<li><a readonly="readonly" href="#" class="showpicker done" data-picker="dispute" data-object=""><span class="icon icon-ban-circle"></span>Dispute/reject</a></li>			
+		</ul>
+	</div>
+</div>
+
+<div class="picker" id="picker-comment" data-pickertype="picker-comment">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Comment</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<div class="input">
+			<label for="newcomment">Comment</label>
+			<textarea id="newcomment" class="pickercomment"></textarea>
+		</div>
+		<ul class="options" id="commentscope">
+			<li><a class="textonly" href="#" data-val="Internal">Internal comment</a></li>
+			<li><a href="#" class="active textonly" data-val="External">Shared comment</a></li>
+		</ul>
+		<div class="info">Description to user</div>
+		<a href="#" class="button done textonly">Add comment</a>
+	</div>
+</div>
+
+
+<div class="picker" id="picker-memo" data-pickertype="picker-memo">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">New memo</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<!--<div class="object-rep"></div>-->
+		<div class="input">
+			<label for="newmemo">Memo</label>
+			<textarea id="newmemo" class="pickercomment"></textarea>
+		</div>
+		<ul class="options" id="memoscope">
+			<li><a class="textonly" href="#" data-val="internal">Internal memo</a></li>
+			<li><a href="#" class="active textonly" data-val="public">Public memo</a></li>
+		</ul>
+		<div class="info">Description to user</div>
+		<a href="#" class="button done textonly">Post memo</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-code" data-pickertype="picker-code" data-object="">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Code invoice</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		
+		<div class="inputs tags">
+			<div class="input">
+				<label for="generalledger">General Ledger</label>
+				<input readonly="readonly" class="showpicker" data-picker="generalledger" id="generalledger" data-tag="General ledger" type="text">
+			</div>
+			<div class="input">
+				<label for="costcenter">Cost Center</label>
+				<input readonly="readonly" class="showpicker" data-picker="costcenter" id="costcenter" data-tag="Cost center" type="text">
+			</div>
+			<div class="input">
+				<label for="internalorder">Internal Order</label>
+				<input readonly="readonly" class="showpicker" data-picker="internalorder" id="internalorder" data-tag="Internal order" type="text">
+			</div>
+			<div class="input">
+				<label for="wbs">WBS</label>
+				<input readonly="readonly" class="showpicker" data-picker="wbs" id="wbs" data-tag="WBS" type="text">
+			</div>
+			<div class="input checkbox">
+				<div>
+					<input id="approveit" name="approveit" value="approveit" type="checkbox"><label for="approveit">Approve instantly</label>
+				</div>
+			</div>
+			<div class="input checkbox">
+				<div>
+					<input id="saverule" name="saverule" value="saverule" type="checkbox"><label for="saverule">Save as rule</label>
+				</div>
+			</div>
+		</div>
+		
+
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-paywithx" data-pickertype="picker-paywithx">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Pay with Intuit Payment Network</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<div class="steps">
+			<div class="step">
+				<div class="input">
+					<label for="paywithxamount">Amount (USD)</label>
+					<input id="paywithxamount" type="tel">
+				</div>
+				<a href="#" class="button nextstep textonly">Pay</a>
+			</div>
+			<div class="step stepwait" data-waittime="300">
+				Connecting to payment gateway…
+			</div>
+			<div class="step stepwait" data-waittime="1300">
+				Executing transaction
+			</div>
+			<div class="step">
+				Your payment was successful!
+				<a href="#" class="button done textonly">Close</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="picker" id="picker-recordpayment" data-pickertype="picker-recordpayment">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Record payment</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<div class="input">
+			<label for="recordamount">Amount received (USD)</label>
+			<input id="recordamount" type="tel">
+		</div>
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-sendpayment" data-pickertype="picker-sendpayment">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Send payment</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<div class="input">
+			<label for="recordamount">Amount (USD)</label>
+			<input id="sendamount" type="tel">
+		</div>
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-generalledger" data-pickertype="picker-generalledger">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">General ledger</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<ul class="options">
+			<li class="input"><input class="optionsearch" id="glsearch" placeholder="Search / add" type="text"></li>
+			<li><a href="#" class="done textonly" data-val="0014522: General assistance">0014522: General assistance</a></li>
+			<li><a href="#" class="done textonly" data-val="1500533: Supplies and expenses">1500533: Supplies and expenses</a></li>
+			<li><a href="#" class="done textonly" data-val="2124522: Equipment and facilities">2124522: Equipment and facilities</a></li>
+			<li class="defaultHidden"><a href="#" class="done textonly" data-val="2124522: Sponsorships">2124522: Sponsorships</a></li>
+			<li class="defaultHidden"><a href="#" class="done textonly" data-val="2367322: Advertising">2367322: Advertising</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="picker" id="picker-costcenter" data-pickertype="picker-costcenter">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Cost center</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<ul class="options">
+			<li class="input"><input class="optionsearch" id="costcentersearch" placeholder="Search" type="text"></li>
+			<li><a href="#" class="done textonly" data-val="2352: R&amp;D">2352: R&amp;D</a></li>
+			<li><a href="#" class="done textonly" data-val="7433: Marketing">7433: Marketing</a></li>
+			<li><a href="#" class="done textonly" data-val="1152: Customer Service">1152: Customer Service</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="picker" id="picker-internalorder" data-pickertype="picker-internalorder">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Internal Order</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<ul class="options">
+			<li class="input"><input id="internalordersearch" placeholder="Internal order" type="text"></li>
+		</ul>
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-wbs" data-pickertype="picker-wbs">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">WBS</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<ul class="options">
+			<li class="input"><input id="wbssearch" placeholder="WBS mapping" type="text"></li>
+		</ul>
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-approve" data-pickertype="picker-approve">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Approve invoice</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<div class="input">
+			<label for="approvecomment">Comment (optional)</label>
+			<textarea id="approvecomment" class="pickercomment" data-defaultvalue="I hereby approve this invoice and it's not booked for payment."></textarea>
+		</div>
+		<div class="info">I hereby approve this invoice. My approval will be communicated also to the sender of this document.</div>
+		<a href="#" class="button done textonly">Confirm approval</a>
+	</div>
+</div>
+
+<div style="z-index: 49;" class="overlay">
+</div>
+
+
+<!--
+<div class="picker" id="picker-delegate" data-pickertype="picker-delegate">
+	<div class="pickerbox animate">
+		<div class="header">Delegate<a href="#" class="shifties-close icon"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li class="input"><input type="text" id="delegatesearch" placeholder="Employee name or email"></li>
+			<li><a href='#' data-val='2'>Christian (Supplierx)</a></li><li><a href='#' data-val='3'>Peter Thomsen (Supplierx)</a></li><li><a href='#' data-val='9'>Karina (Supplierx)</a></li>		</ul>
+		<div class="info">
+			Delegation transfers all responsibility and rights to the delegatee.
+		</div>
+		<a href="#" class="button done">Delegate</a>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+//-->
+
+<div class="picker" id="picker-share" data-pickertype="picker-share">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Share with…</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li class="input"><input class="optionsearch" id="sharesearch" placeholder="Employee name or email" type="text"></li>
+			<li><a href="#" data-val="2"><span class="icon icon-ok"></span>Christian (Supplierx)</a></li><li><a href="#" data-val="3"><span class="icon icon-ok"></span>Peter Thomsen (Supplierx)</a></li><li><a href="#" data-val="9"><span class="icon icon-ok"></span>Karina (Supplierx)</a></li>		</ul>
+
+		<div class="input">
+			<label for="sharecomment">Comment (optional)</label>
+			<textarea id="sharecomment" class="pickercomment"></textarea>
+		</div>
+		<div class="input checkbox">
+			<div>
+				<input id="delegateit" name="delegateit" value="delegateit" type="checkbox"><label for="delegateit">Delegate</label>
+			</div>
+		</div>
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+
+</div>
+
+<div class="picker" id="picker-dispute" data-pickertype="picker-dispute">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Reject/dispute</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<ul class="options">
+			<li><a href="#" data-val="dispute"><span class="icon icon-exclamation-sign"></span>Dispute</a></li>
+			<li><a href="#" data-val="reject"><span class="icon icon-ban-circle"></span>Reject</a></li>
+		</ul>
+		<div class="input">
+			<label for="disputecomment">Comment to supplier (optional)</label>
+			<textarea id="disputecomment" class="pickercomment"></textarea>
+		</div>
+		<div class="info">
+			Dispute/reject info to user
+		</div>
+		<a href="#" class="button done textonly">Done</a>
+	</div>
+
+</div>
+
+<div class="picker" id="picker-disputeresolve" data-pickertype="picker-disputeresolve">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Resolve dispute</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep"></div>
+		<div class="input">
+			<label for="resolvedisputecomment">Comment to supplier (optional)</label>
+			<textarea id="resolvedisputecomment" class="pickercomment"></textarea>
+		</div>
+		<div class="info">Description to user</div>
+		<a href="#" class="button done textonly">Resolve dispute</a>
+	</div>
+
+</div>
+
+
+
+<div class="picker" id="picker-appactivate" data-pickertype="picker-appactivate">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Confirm app activation</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep-nonauto "><div class="placeholder"><img src="_user_data/icon_geosho.png">App object representation</div></div>
+
+		<div class="description">
+			<ul>
+				<li>The App can view or create network contacts in your account.</li>
+				<li>The App can delete invoices in your account.</li>
+				<li>The App can broadcast messages to public</li>
+			</ul>
+			<div class="disclaimercopy">This is a "Third Party App" as defined in
+ Tradeshift's Terms of Service. Tradeshift accepts no liability for the 
+functionality, availability or security of this application.</div>
+		</div>
+		<a href="#" class="button done textonly">Activate app</a>
+	</div>
+</div>
+
+
+
+<div class="picker" id="picker-appactivate-tcc" data-pickertype="picker-appactivate" data-activatedapp="The Currency Cloud">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Activate app</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep-nonauto app-rep clearfix">
+			<div class="placeholder clearfix">
+				<img src="_user_data/icon_tcc2.png">
+				<div class="appdescriptor">
+					<h2>The Currency Cloud</h2>
+					Simple &amp; Low Cost International Business Payments
+				</div>
+			</div>
+		</div>
+
+		<div class="description">
+			<ul>
+				<li>The App can read your invoices</li>
+			</ul>
+			<div class="disclaimercopy">This is a "Third Party App" as defined in
+ Tradeshift's Terms of Service. Tradeshift accepts no liability for the 
+functionality, availability or security of this application.</div>
+		</div>
+		<a href="#" class="button done textonly">Activate</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-appactivate-qbo" data-pickertype="picker-appactivate" data-activatedapp="Quickbooks Online Connector">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Activate app</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep-nonauto app-rep clearfix">
+			<div class="placeholder clearfix">
+				<img src="_user_data/icon_qb.png">
+				<div class="appdescriptor">
+					<h2>Quickbooks Online Connector</h2>
+					description of app
+				</div>
+			</div>
+		</div>
+
+		<div class="description">
+			<ul>
+				<li>The App can read your invoices</li>
+			</ul>
+			<div class="disclaimercopy">This is a "Third Party App" as defined in
+ Tradeshift's Terms of Service. Tradeshift accepts no liability for the 
+functionality, availability or security of this application.</div>
+		</div>
+		<a href="#" class="button done textonly">Activate</a>
+	</div>
+</div>
+
+<div class="picker" id="picker-appactivate-ipn" data-pickertype="picker-appactivate" data-activatedapp="Intuit Payments">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Activate app</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep-nonauto app-rep clearfix">
+			<div class="placeholder clearfix">
+				<img src="_user_data/icon_ipn.png">
+				<div class="appdescriptor">
+					<h2>Intuit Payments</h2>
+					description of app
+				</div>
+			</div>
+		</div>
+
+		<div class="description">
+			<ul>
+				<li>The App can read your invoices</li>
+			</ul>
+			<div class="disclaimercopy">This is a "Third Party App" as defined in
+ Tradeshift's Terms of Service. Tradeshift accepts no liability for the 
+functionality, availability or security of this application.</div>
+		</div>
+		<a href="#" class="button done textonly">Activate</a>
+	</div>
+</div>
+
+
+<div class="picker dontclear" id="picker-statuschange2" data-pickertype="picker-statuschange2">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Set status</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep" id="invoice2rep">
+			[selected invoice]
+		</div>
+		<ul class="options">
+			<li>
+				<a href="#" class="textonly done" data-val="Unpaid">Unpaid</a>
+			</li>
+			<li>
+				<a href="#" class="textonly done active" data-val="Paid">Paid</a>
+			</li>
+			<li>
+				<a href="#" class="textonly done" data-val="Dispute">Dispute</a>
+			</li>
+			<li>
+				<a href="#" class="textonly done" data-val="Rejected">Rejected</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="picker" id="picker-ddoffer" data-pickertype="picker-ddoffer">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Dynamic Discounting</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep" id="invoice2rep">
+			[selected invoice]
+		</div>
+		<div class="input">
+			<label for="internalorder">Terms of Payment</label>
+			<input readonly="readonly" class="showpicker" data-picker="ddterms" id="ddterms" data-tag="Terms of payment" type="text">
+		</div>
+	</div>
+</div>
+
+<div class="picker" id="picker-ddterms" data-pickertype="picker-ddterms">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">DD: Terms of Payment</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<ul class="options">
+			<li><a href="#" class="done textonly" data-val="2% 10 days, Net 45">2% 10 days, Net 45</a></li>
+			<li><a href="#" class="done textonly" data-val="4.5% 10 days, Net 45">4.5% 10 days, Net 45</a></li>
+			<li><a href="#" class="done textonly" data-val="0.5% 60 days">0.5% 60 days</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="picker" id="picker-appdeactivate" data-pickertype="picker-appdeactivate">
+	<div style="margin-right: 0px;" class="pickerbox animate">
+		<div class="header"><span class="headertext">Deactivate app</span><a href="#" class="shifties-close icon textonly"></a></div>
+		<div class="object-rep-nonauto "><div class="placeholder"><img src="_user_data/icon_geosho.png">App object representation</div></div>
+
+		<div class="description">
+			<strong>All settings and stored data from this App will be lost if deactivated.</strong>
+		</div>
+		<a href="#" class="button done alert textonly">Deactivate app</a>
+	</div>
+</div>
+	
+	<script src="_user_data/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.8.3.min.js"><\/script>')</script>	
+	<script src="_user_data/functions.js"></script>
+	<script src="_user_data/script.js"></script>
+
+
+</body></html>
